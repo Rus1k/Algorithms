@@ -44,5 +44,18 @@ public class ExtractingUniqueElementsTest {
         expected = new ArrayList<Integer>();
         expected.add(0);
         extractingUniqueElements.extractingUniqueElements(array);
+        assertEquals(expected, extractingUniqueElements.extractingUniqueElements(array));
+    }
+
+    @Test
+    public void testArrayWithoutDuplicates(){
+        array = new int[]{0, 3, 5, 9};
+        expected = new ArrayList<Integer>();
+        expected.add(0);
+        expected.add(3);
+        expected.add(5);
+        expected.add(9);
+        extractingUniqueElements.extractingUniqueElements(array);
+        assertEquals(expected, extractingUniqueElements.extractingUniqueElements(array));
     }
 }

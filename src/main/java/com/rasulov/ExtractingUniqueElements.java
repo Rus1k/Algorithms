@@ -11,16 +11,19 @@ public class ExtractingUniqueElements {
 
         List<Integer> result = new ArrayList<Integer>();
 
-        for (int i = 0; i < array.length-1; i++) {
+        for (int i = 0; i < array.length; i++) {
 
-            if (array[i] == array[i+1] && i != 0) {
+            if (i == 0) {
+                result.add(array[i]);
+                continue;
+            }
+
+            if (array[i] == array[i - 1]) {
                 continue;
             } else {
-                result.add(array[i+1]);
+                result.add(array[i]);
             }
         }
-
         return result;
-
     }
 }
