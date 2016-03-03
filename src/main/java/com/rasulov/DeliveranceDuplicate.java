@@ -14,7 +14,7 @@ public class DeliveranceDuplicate {
         }
         while (left.getNext() != null) {
             if (left.getValue() == right.getValue()) {
-                deleteDuplicate(withDuplicateRemade, right);
+                deleteDuplicate(left, right);
             }
             left = right;
             right = left.getNext();
