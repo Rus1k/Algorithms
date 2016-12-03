@@ -1,35 +1,15 @@
-package com.rasulov;
+package com.rasulov.task55;
 
-/**
- * Created by ruslan on 27.02.2016.
- */
+
 public class Node {
-    private int value;
-    private Node next;
+    public static int count = 0;
 
-    public Node(int value, Node next) {
-        this.value = value;
-        this.next = next;
-    }
-    public Node(int value){
-        this.value = value;
+    {
+        count++;
     }
 
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
-    public Node getNext() {
-        return next;
-    }
-
-    public void setNext(Node next) {
-        this.next = next;
-    }
+    public Node next;
+    int value = count;
 
     @Override
     public boolean equals(Object o) {
